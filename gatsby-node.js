@@ -4,6 +4,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       allProductsJson {
         edges {
           node {
+            brand
             slug
           }
         }
@@ -20,7 +21,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     const product = edge.node
 
     createPage({
-      path: `/products/${product.slug}/`,
+      path: `/products/${product.brand}/${product.slug}/`,
       component: require.resolve("./src/templates/product-graphql.js"),
       context: {
         slug: product.slug,
