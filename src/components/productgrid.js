@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
+//import PropTypes from "prop-types"
 import styled from "styled-components"
+import ProductCard from "../components/productCard"
 
 const AutoGrid = styled.div`
   --auto-grid-min-size: 16rem;
@@ -16,40 +16,31 @@ const AutoGrid = styled.div`
 export default class ProductGrid extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      default: 0,
-      index: 0,
-    }
     console.log(`constructor`)
   }
 
-  static propTypes = {
-    prodImages: PropTypes.array.isRequired,
-  }
+  // static propTypes = {
+  //   prodImages: PropTypes.array.isRequired,
+  // }
 
   render() {
     console.log(`rendered`)
-    const { prodImages } = this.props.data.edges
+    const products = this.props.productDetails.edges
+    console.log(products)
     return (
       <AutoGrid>
-        {prodImages.map((image, index) => (
-          <div
-            key={image.node.childImageSharp.fluid.src}
-            onClick={() => this.setState({ default: index })}
-            onMouseEnter={() => this.setState({ index: index })}
-            onMouseLeave={() => this.setState({ index: this.state.default })}
-          >
-            <Img
-              style={{
-                border:
-                  index === this.state.default
-                    ? "1px solid #021a40"
-                    : "1px solid transparent",
-              }}
-              fluid={image.node.childImageSharp.fluid}
-            />
-          </div>
+        {products.map(({ node: product }) => (
+          <ProductCard
+        // key={`preview-${project.slug}`}
+        key={`preview-${product.slug}`}
+        title={product.name}
+        description={product.description}
+        // slug={project.slug}
+        // imageData={project.image.childImageSharp.fluid}
+        slug={product.slug}
+        imageData={product.mainImage.childImageSharp.fluid}
+      />
+          //<Img fluid={index.node.image.childImageSharp.fluid} />
         ))}
       </AutoGrid>
     )

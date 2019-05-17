@@ -1,11 +1,11 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import ProductGrid from "./productgrid"
 
-const Product = () => (
-  <StaticQuery
-    query={graphql`
-      query ProductDetailsQuery {
+const Product = () => {
+  const { allProductsJson } = useStaticQuery(
+    graphql`
+      query {
         allProductsJson {
           edges {
             node {
@@ -28,7 +28,7 @@ const Product = () => (
               tax
               availability
               googleProductCategory
-              image {
+              mainImage {
                 childImageSharp {
                   fluid(maxWidth: 300) {
                     ...GatsbyImageSharpFluid
@@ -41,8 +41,9 @@ const Product = () => (
           }
         }
       }
-    `}
-    render={data => <ProductGrid productDetails={data} />}
-  />
-)
+    `
+  )
+
+  return <ProductGrid productDetails={allProductsJson} />
+}
 export default Product
