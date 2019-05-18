@@ -4,7 +4,7 @@ import styled from "styled-components"
 import ProductCard from "../components/productCard"
 
 const AutoGrid = styled.div`
-  --auto-grid-min-size: 16rem;
+  --auto-grid-min-size: 18rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
