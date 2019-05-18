@@ -26,7 +26,7 @@ export const query = graphql`
       tax
       availability
       googleProductCategory
-      image {
+      mainImage {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
