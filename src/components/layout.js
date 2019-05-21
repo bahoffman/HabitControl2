@@ -8,9 +8,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+// import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+
+// const AutoGrid = styled.div`
+// display: grid;
+//   grid-template-areas:
+//     "header header header"
+//     "nav content side"
+//     "footer footer footer";
+
+//   grid-template-columns: 200px 1fr 200px;
+//   grid-template-rows: auto 1fr auto;
+//   grid-gap: 10px;
+
+//   height: 100vh;
+// `
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -30,7 +45,7 @@ const Layout = ({ children }) => (
           style={{
             margin: `0 auto`,
             // maxWidth: 960,
-             maxWidth: `80%`,
+            maxWidth: `80%`,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
           }}
