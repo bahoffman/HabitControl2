@@ -40,10 +40,16 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div
+        style={{
+          display: `grid`,
+          gridTemplateAreas: "'header' 'content' 'footer'",
+        }}
+      >
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
+            gridArea: `content`,
             margin: `0 auto`,
             // maxWidth: 960,
             maxWidth: `80%`,
@@ -52,9 +58,9 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <Footer />
         </div>
-      </>
+        <Footer />
+      </div>
     )}
   />
 )

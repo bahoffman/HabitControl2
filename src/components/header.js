@@ -13,6 +13,7 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <header
     style={{
+      gridArea: "`header`",
       background: `#777AC4`,
       marginBottom: `1.45rem`,
     }}
@@ -23,7 +24,6 @@ const Header = ({ siteTitle }) => (
         flexFlow: `row wrap`,
         justifyContent: `flex-end`,
         alignItems: `center`,
-        listStyle: `none`,
         margin: 0,
         // margin: `auto`,
         // maxWidth: 960,
