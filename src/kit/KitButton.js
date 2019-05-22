@@ -1,10 +1,6 @@
-import { Button, ToggleButton, ToggleButtonGroup } from "react-bootstrap"
 import styled from "styled-components"
 
-export const KitToggleButton = ToggleButton
-export const KitToggleButtonGroup = ToggleButtonGroup
-
-export const KitButton = styled(Button)`
+export const KitButton = styled.button`
   background: #1a1a1a;
   color: #fff;
   padding: 6px 30px;

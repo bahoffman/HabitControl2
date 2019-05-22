@@ -7,7 +7,7 @@
 // import { KitAttribution } from "./KitAttribution";
 // import { KitNavbar, KitNav } from "./KitNavbar";
 // import { KitContainer, KitRow, KitCol } from "./KitContainer";
-import { KitButton, KitToggleButton, KitToggleButtonGroup } from "./KitButton"
+import { KitButton } from "./KitButton"
 
 export {
   //   KitCard,
@@ -18,8 +18,8 @@ export {
   //   KitDropdown,
   //   KitAttribution,
   KitButton,
-  KitToggleButton,
-  KitToggleButtonGroup,
+  // KitToggleButton,
+  // KitToggleButtonGroup,
   //   KitContainer,
   //   KitRow,
   //   KitCol,
