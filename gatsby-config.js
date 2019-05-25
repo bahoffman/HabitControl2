@@ -11,6 +11,7 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-styled-components`,
