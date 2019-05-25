@@ -10,26 +10,24 @@ const StyledLink = styled(Link)`
   color: white;
 `
 
+const StyledHeader = styled.header`
+  grid-area: header;
+  background: #777ac4;
+  margin-bottom: 1.45rem;
+`
+
+const StyledNav = styled.nav`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 1.45rem 1.0875rem;
+`
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      gridArea: "`header`",
-      background: `#777AC4`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <nav
-      style={{
-        display: `flex`,
-        flexFlow: `row wrap`,
-        justifyContent: `flex-end`,
-        alignItems: `center`,
-        margin: 0,
-        // margin: `auto`,
-        // maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <StyledHeader>
+    <StyledNav>
       <h1 style={{ margin: 0, flexGrow: 2 }}>
         <StyledLink to="/">{siteTitle}</StyledLink>
       </h1>
@@ -37,8 +35,8 @@ const Header = ({ siteTitle }) => (
       <StyledLink to="/contact/">Contact</StyledLink>
       <StyledLink to="/faq/">FAQ</StyledLink>
       <StyledLink to="/">Shop</StyledLink>
-    </nav>
-  </header>
+    </StyledNav>
+  </StyledHeader>
 )
 
 Header.propTypes = {

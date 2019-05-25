@@ -8,25 +8,30 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-// import styled from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+import styled from "styled-components"
 
-// const AutoGrid = styled.div`
-// display: grid;
-//   grid-template-areas:
-//     "header header header"
-//     "nav content side"
-//     "footer footer footer";
+const LayoutGrid = styled.div`
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+`
 
-//   grid-template-columns: 200px 1fr 200px;
-//   grid-template-rows: auto 1fr auto;
-//   grid-gap: 10px;
-
-//   height: 100vh;
-// `
+const StyledContent = styled.main`
+  grid-area: content;
+  /* margin: 0 auto; */
+  max-width: 80%;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -40,27 +45,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div
-        style={{
-          display: `grid`,
-          gridTemplateAreas: "'header' 'content' 'footer'",
-        }}
-      >
+      <LayoutGrid>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            gridArea: `content`,
-            margin: `0 auto`,
-            // maxWidth: 960,
-            maxWidth: `80%`,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-        </div>
+        <StyledContent>{children}</StyledContent>
         <Footer />
-      </div>
+      </LayoutGrid>
     )}
   />
 )

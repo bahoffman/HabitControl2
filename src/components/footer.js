@@ -1,11 +1,16 @@
 import React from "react"
+import styled from "styled-components"
+
+const StyledFooter = styled.footer`
+  grid-area: footer;
+`
 
 const Footer = () => (
-  <footer style={{ gridArea: "`footer`" }}>
+  <StyledFooter>
     © {new Date().getFullYear()}, Built with
     {` `}
     <a href="https://www.gatsbyjs.org">Gatsby</a>
-  </footer>
+  </StyledFooter>
 )
 
 export default Footer
