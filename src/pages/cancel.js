@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const CancelPage = () => (
   <Layout>
-    <SEO title="Cancel Page" />
+    <SEO title="Cancel Page" description="Transaction Cancelled Page" />
     <h1 style={{ textAlign: "center" }}>PAYMENT CANCELED!</h1>
     <p>
       Your transaction has been cancelled.The information you entered was not

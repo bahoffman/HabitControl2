@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const SuccessPage = () => (
   <Layout>
-    <SEO title="Success Page" />
+    <SEO title="Success" description="Successful Transaction Page" />
     <div
       style={{
         fontSize: `39px`,
@@ -21,7 +21,7 @@ const SuccessPage = () => (
         Thank you, we have received your order and payment!
       </p>
     </div>
-    <div style={{margin: "100px 0"}}>
+    <div style={{ margin: "100px 0" }}>
       <p>
         <b>Thank you for your payment.</b> Your transaction has been completed.
         We have received your payment and a receipt for your purchase has been

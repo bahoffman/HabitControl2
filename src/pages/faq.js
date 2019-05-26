@@ -7,7 +7,7 @@ import "react-tabs/style/react-tabs.css"
 
 const FAQPage = () => (
   <Layout>
-    <SEO title="FAQs" />
+    <SEO title="FAQs" description="Frequently Asked Questions Page" />
     <Tabs>
       <TabList>
         <Tab>USING HABITROL</Tab>

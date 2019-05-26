@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 
 const ResourcesPage = () => (
   <Layout>
-    <SEO title="Resources" />
+    <SEO title="Resources" description="Resources Page" />
 
     <h3>American Cancer Society</h3>
     <p>
