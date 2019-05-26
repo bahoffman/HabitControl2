@@ -4,10 +4,17 @@ const ContactForm = () => (
   <div>
     <h1>Customer Support</h1>
     <form
-      action="https://formaholic.com/f/294979e95c64b4cc"
+      action=" https://formsubmit.co/9b8578472d58431730eb4f01d291d499 "
       method="POST"
       accept-charset="UTF-8"
     >
+      <input
+        type="hidden"
+        name="_next"
+        value="https://yourdomain.co/thanks.html"
+      />
+      <input type="hidden" name="_subject" value="New submission!" />
+      <input type="text" name="_honey" style={{ display: "none" }} />
       <label>
         Name
         <input
@@ -37,9 +44,10 @@ const ContactForm = () => (
       </label>
       <label>
         Your request or query
-        <input type="text" name="subject" required="true" />
+        <input type="text" name="info" required="true" />
       </label>
-      <button type="submit">Submit</button>
+      <input type="submit" value="Send" />
+      {/* <button type="submit">Submit</button> */}
     </form>
   </div>
 )
