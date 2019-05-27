@@ -1,5 +1,5 @@
 ---
-path: "terms-of-service"
+path: "/terms-of-service"
 date: "2019-05-25"
 title: "Terms of Service"
 ---

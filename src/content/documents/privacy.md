@@ -1,5 +1,5 @@
 ---
-path: "privacy-policy"
+path: "/privacy-policy"
 date: "2019-05-25"
 title: "Privacy Policy"
 ---

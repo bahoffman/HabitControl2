@@ -42,11 +42,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     const document = edge.node
 
     createPage({
-      path: `/${document.frontmatter.path}/`,
+      path: document.frontmatter.path,
       component: require.resolve("./src/templates/document.js"),
-      context: {
-        id: document.id,
-      },
+      context: {},
     })
   })
 }

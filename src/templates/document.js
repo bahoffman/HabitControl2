@@ -23,8 +23,8 @@ const Document = ({ data }) => {
 export default Document
 
 export const query = graphql`
-  query($id: String) {
-    markdownRemark(id: { eq: $id }) {
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
