@@ -9,12 +9,9 @@ const Document = ({ data }) => {
   return (
     <Layout>
       <SEO title="Privacy Policy" description="Privacy Policy Page" />
-      <div>
-        <div>
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+      <div style={{ width: "80%", margin: "auto" }}>
+        <h1>{frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )
