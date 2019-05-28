@@ -15,7 +15,7 @@ Dallas, TX 75231-4596
 Phone: 1-800-242-8721  
 Web Address: http://www.americanheart.org
 
-**American Lung Association National Office American Lung Association**  
+**American Lung Association**  
 1740 Broadway  
 New York, NY 10019-4374  
 Phone: 1-800-586-4872  

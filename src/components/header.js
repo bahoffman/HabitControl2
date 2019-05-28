@@ -3,13 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  /* display: block; */
-  padding: 1em;
-  color: white;
-`
-
 const StyledHeader = styled.header`
   grid-area: header;
   background: #777ac4;
@@ -23,6 +16,13 @@ const StyledNav = styled.nav`
   align-items: center;
   margin: 0;
   padding: 1.45rem 1.0875rem;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  /* display: block; */
+  padding: 1em;
+  color: white;
 `
 
 const Header = ({ siteTitle }) => (
