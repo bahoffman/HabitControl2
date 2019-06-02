@@ -34,9 +34,8 @@ const Footer = () => (
       <StyledLink to="/terms-of-service/">Terms of Use</StyledLink>
     </div>
     <div>
-      © {new Date().getFullYear()}
+      <span>© {new Date().getFullYear()}</span>
       <StyledA href="https://bada-bing-llc.business.site/">
-        {" "}
         Bada Bing LLC
       </StyledA>
     </div>

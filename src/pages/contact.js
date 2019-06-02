@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ContactForm from "../components/contactform"
+import ContactForm from "../components/contactNetlify"
 
 export default () => (
   <Layout>
     <SEO title="Contact" description="Contact Us Page" />
-    <ContactForm/>
+    <ContactForm />
   </Layout>
 )

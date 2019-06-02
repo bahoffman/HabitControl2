@@ -1,7 +1,26 @@
 import React from "react"
+import styled from "styled-components"
+
+const StyledInput = styled.input`
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+`
+const StyledLabel = styled.label`
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+`
+const StyledFormContainer = styled.div`
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+`
 
 const ContactForm = () => (
-  <div>
+  <StyledFormContainer>
     <h1>Customer Support</h1>
     <form
       action=" https://formsubmit.co/9b8578472d58431730eb4f01d291d499 "
@@ -15,41 +34,41 @@ const ContactForm = () => (
       />
       <input type="hidden" name="_subject" value="New submission!" />
       <input type="text" name="_honey" style={{ display: "none" }} />
-      <label>
+      <StyledLabel>
         Name
-        <input
+        <StyledInput
           type="text"
           name="name"
           placeholder="Enter name"
           required="true"
         />
-      </label>
-      <label>
+      </StyledLabel>
+      <StyledLabel>
         Email address
-        <input
+        <StyledInput
           type="email"
           name="email"
           placeholder="Enter email"
           required="true"
         />
-      </label>
-      <label>
+      </StyledLabel>
+      <StyledLabel>
         Subject
-        <input
+        <StyledInput
           type="text"
           name="subject"
           placeholder="Enter Subject"
           required="true"
         />
-      </label>
-      <label>
+      </StyledLabel>
+      <StyledLabel>
         Your request or query
-        <input type="text" name="info" required="true" />
-      </label>
+        <StyledInput type="text" name="info" required="true" />
+      </StyledLabel>
       <input type="submit" value="Send" />
       {/* <button type="submit">Submit</button> */}
     </form>
-  </div>
+  </StyledFormContainer>
 )
 
 export default ContactForm
