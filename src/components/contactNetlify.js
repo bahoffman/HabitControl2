@@ -1,44 +1,79 @@
 import React from "react"
-// mport styled from "styled-components"
+import styled from "styled-components"
+
+//  https://www.sitepoint.com/make-forms-fun-with-flexbox/
+const StyledSubmitButton = styled.button`
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* float: right; */
+`
+const StyledTextArea = styled.textarea`
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  order: 2;
+  flex: 1 1 auto;
+`
+const StyledInput = styled.input`
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  order: 2;
+  flex: 1;
+`
+
+const StyledLabel = styled.label`
+  padding: 12px;
+  order: 1;
+`
+
+const StyledFormContainer = styled.div`
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+`
+
+const StyledDiv = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 const ContactForm = () => (
-  <div>
+  <StyledFormContainer>
     <form
       name="contact"
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
     >
-      <input type="hidden" name="bot-field" />
-      <p>
-        <label>
-          Your Name: <input type="text" name="name" />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Email: <input type="email" name="email" />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Role:{" "}
-          <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select>
-        </label>
-      </p>
-      <p>
-        <label>
-          Message: <textarea name="message" />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
+      <fieldset>
+        <legend>Contact Us</legend>
+        <input type="hidden" name="bot-field" />
+        <StyledDiv>
+          <StyledInput type="text" name="name" />
+          <StyledLabel>Your Name: </StyledLabel>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledInput type="email" name="email" />
+          <StyledLabel>Your Email: </StyledLabel>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledTextArea name="message" />
+          <StyledLabel>Message: </StyledLabel>
+        </StyledDiv>
+        <StyledSubmitButton type="submit">Send</StyledSubmitButton>
+      </fieldset>
     </form>
-  </div>
+  </StyledFormContainer>
 )
 
 export default ContactForm
