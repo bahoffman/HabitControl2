@@ -75,7 +75,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Habit Control Web Store`,
         short_name: `Habit Control`,
         start_url: `/`,
         background_color: `#663399`,
