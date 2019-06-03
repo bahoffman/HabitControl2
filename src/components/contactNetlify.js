@@ -55,6 +55,7 @@ const ContactForm = () => (
       netlify-honeypot="bot-field"
       data-netlify="true"
       action="/success-form"
+      Content-Type="application/x-www-form-urlencoded"
     >
       <fieldset>
         <legend>Contact Us</legend>
