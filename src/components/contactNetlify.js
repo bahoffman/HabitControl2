@@ -60,6 +60,7 @@ const ContactForm = () => (
       <fieldset>
         <legend>Contact Us</legend>
         <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <StyledDiv>
           <StyledInput type="text" name="name" />
           <StyledLabel>Your Name: </StyledLabel>
