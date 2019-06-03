@@ -57,10 +57,10 @@ const ContactForm = () => (
       action="/success-form"
       Content-Type="application/x-www-form-urlencoded"
     >
+      <input type="hidden" name="bot-field" />
       <fieldset>
         <legend>Contact Us</legend>
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
+
         <StyledDiv>
           <StyledInput type="text" name="name" />
           <StyledLabel>Your Name: </StyledLabel>
@@ -75,6 +75,7 @@ const ContactForm = () => (
         </StyledDiv>
         <StyledSubmitButton type="submit">Send</StyledSubmitButton>
       </fieldset>
+      <input type="hidden" name="form-name" value="contact" />
     </form>
   </StyledFormContainer>
 )
