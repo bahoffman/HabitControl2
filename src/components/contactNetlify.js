@@ -55,9 +55,9 @@ const ContactForm = () => (
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       action="/success-form"
-      Content-Type="application/x-www-form-urlencoded"
+      // Content-Type="application/x-www-form-urlencoded"
     >
-      <input type="hidden" name="bot-field" />
+      
       <fieldset>
         <legend>Contact Us</legend>
 
@@ -75,6 +75,7 @@ const ContactForm = () => (
         </StyledDiv>
         <StyledSubmitButton type="submit">Send</StyledSubmitButton>
       </fieldset>
+      <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
     </form>
   </StyledFormContainer>
