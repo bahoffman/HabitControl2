@@ -1,3 +1,9 @@
+---
+path: "/.well-known/brave-rewards-verification.txt"
+date: "2019-06-06"
+title: "Brave Rewards Publisher Verification File"
+---
+
 This is a Brave Rewards publisher verification file.
 
 Domain: csb-m4nxl93koj.netlify.com
